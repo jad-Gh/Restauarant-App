@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "60e0882ac2c21608f43a4beb"
+  },
+  "isAdmin": false,
+  "isEnabled": true,
+  "name": "someuser1",
+  "email": "someuser1@mail.com",
+  "password": "$2b$10$hpvXPrCcmbf5zhsL6ZOZ8.v2i1xHUHQed9KLnBf08/0/PfHqwuBdi",
+  "address": "",
+  "longitude": 0,
+  "latitude": 0,
+  "order": " ",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e0883cc2c21608f43a4bee"
+  },
+  "isAdmin": true,
+  "isEnabled": true,
+  "name": "someuser2",
+  "email": "someuser2@mail.com",
+  "password": "$2b$10$Q35zJfY4dDErXbDTuxHHMevBPeJkoI4k72zP7mlf.szqWHxmlD2Ma",
+  "address": "",
+  "longitude": 0,
+  "latitude": 0,
+  "order": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e08843c2c21608f43a4bf1"
+  },
+  "isAdmin": false,
+  "isEnabled": true,
+  "name": "someuser3",
+  "email": "someuser3@mail.com",
+  "password": "$2b$10$lCYQhg1RgnbW86/kSOHWeOFdrP9xny.UArJo9dBHpOlqqKdJbzlAy",
+  "address": "Hamra",
+  "longitude": 35,
+  "latitude": 33,
+  "order": "60e089e1d7b68d17dcf9faab",
+  "__v": 0
+}]

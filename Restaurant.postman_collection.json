@@ -1,0 +1,791 @@
+{
+	"info": {
+		"_postman_id": "1ad46e14-e7d7-409c-8e80-c97ae6bba869",
+		"name": "Restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://localhost:3000/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRlZjY3NmZlZjdmNTIwNGM0ZGViNGYiLCJpYXQiOjE2MjUyMzI0NzksImV4cCI6MTYyNTIzMjQ5OX0.BKxaAUZpYGhAY0ft5M3LOx_T6ah6jsPcgj7QrL4jZG0",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"someuser1@mail.com\",\r\n    \"password\":\"bad password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"someuser3\",\r\n    \"email\": \"someuser3@mail.com\",\r\n    \"password\": \"bad password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/gentoken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmNTY0MjJmNjU2NzQyMTg3OGRiMTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyNTA3OTJ9.txAkyyfMQGRbPJ-ObLXFE04-M6wX-F8xLAXEXOT-99M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/gentoken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gentoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/logout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmNTY0MjJmNjU2NzQyMTg3OGRiMTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyNTA2NDQsImV4cCI6MTYyNTI1MDY3NH0.VkxEK9UNZoKPgt2FBGVBU7-cjRHDNSmbE5HY4ll0jfs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserAccount",
+			"item": [
+				{
+					"name": "http://localhost:3000/user/profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODg0M2MyYzIxNjA4ZjQzYTRiZjEiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjI1MzI3ODAwLCJleHAiOjE2MjUzMjk2MDB9.9rLZRDs79cPDVaLMqljBbmLUfU9EYxlov1kz0Oj-VRc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/user/profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODg0M2MyYzIxNjA4ZjQzYTRiZjEiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjI1MzI3ODAwLCJleHAiOjE2MjUzMjk2MDB9.9rLZRDs79cPDVaLMqljBbmLUfU9EYxlov1kz0Oj-VRc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"someuser3\",\r\n    \"password\":\"bad password\",\r\n    \"address\": \"Hamra\",\r\n    \"longitude\": 35,\r\n    \"latitude\":33\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AdminAccount",
+			"item": [
+				{
+					"name": "http://localhost:3000/admin/handle",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyOTc0NjEsImV4cCI6MTYyNTI5OTI2MX0.TPixx7RFEmD0N2_ae8NaYkkmpc-1SZjX8EmsA-r7E0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"someuser1@mail.com\",\r\n    \"enableStatus\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/handle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"handle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/admin/orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODgzY2MyYzIxNjA4ZjQzYTRiZWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMzAyOTQsImV4cCI6MTYyNTMzMjA5NH0.wgBGIQagTo897cEvr3jiXVofUS4gYMKQ4-2UFd04qXc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/admin/orderStatus/60e089e1d7b68d17dcf9faab",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODgzY2MyYzIxNjA4ZjQzYTRiZWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMzAyOTQsImV4cCI6MTYyNTMzMjA5NH0.wgBGIQagTo897cEvr3jiXVofUS4gYMKQ4-2UFd04qXc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/orderStatus/60e089e1d7b68d17dcf9faab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"orderStatus",
+								"60e089e1d7b68d17dcf9faab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Branches",
+			"item": [
+				{
+					"name": "http://localhost:3000/branch/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyOTc1NDcsImV4cCI6MTYyNTI5OTM0N30.NHaNy2nnx4B7iJ_AhEGRg_PAfk6QRZ-G_1JC0-dkvZc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"bla Branch\",\r\n    \"longitude\": 33,\r\n    \"latitude\":35\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/branch/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"branch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/branch/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyOTc1NDcsImV4cCI6MTYyNTI5OTM0N30.NHaNy2nnx4B7iJ_AhEGRg_PAfk6QRZ-G_1JC0-dkvZc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/branch/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"branch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/branch/60e015a0bd177332c4b7469e",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyOTc1NDcsImV4cCI6MTYyNTI5OTM0N30.NHaNy2nnx4B7iJ_AhEGRg_PAfk6QRZ-G_1JC0-dkvZc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"bla branch 1\",\r\n    \"longitude\":35,\r\n    \"latitude\":33\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/branch/60e015a0bd177332c4b7469e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"branch",
+								"60e015a0bd177332c4b7469e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/branch/60e015a0bd177332c4b7469e",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUyOTc1NDcsImV4cCI6MTYyNTI5OTM0N30.NHaNy2nnx4B7iJ_AhEGRg_PAfk6QRZ-G_1JC0-dkvZc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/branch/60e015a0bd177332c4b7469e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"branch",
+								"60e015a0bd177332c4b7469e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories&Items",
+			"item": [
+				{
+					"name": "http://localhost:3000/category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMjE4MzYsImV4cCI6MTYyNTMyMzYzNn0.oCMY8AvI6Em19OaO0AT7QOK85D6Xnr9vBfAyuvwY5f4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "drinks",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/drinks.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category/60e035cf2deb162ca020a64a",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMDY1NDQsImV4cCI6MTYyNTMwODM0NH0.B_3k1G6b2bzWVO38pawAOyOxX_ju07Id8bVStqLA5_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "drinks2.0",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/drinks.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/60e035cf2deb162ca020a64a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"60e035cf2deb162ca020a64a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category/60e035cf2deb162ca020a64a",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMDY1NDQsImV4cCI6MTYyNTMwODM0NH0.B_3k1G6b2bzWVO38pawAOyOxX_ju07Id8bVStqLA5_Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/category/60e035cf2deb162ca020a64a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"60e035cf2deb162ca020a64a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category/item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMTI3ODgsImV4cCI6MTYyNTMxNDU4OH0.4f3XKcNK6-Uz9tGX-8Uz0Vy-lvSi8p7iWGR2vLVIQW4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "wrong",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "pizza",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/drinks.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category/item/60e045bafd56333ec4ade62d",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMTA1ODgsImV4cCI6MTYyNTMxMjM4OH0.Mkb985KRWOYyajoY5sHcehCbvP3aIJCBAiGFBEW9TDU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "stillwrong",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "pizza",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/drinks.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/item/60e045bafd56333ec4ade62d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"item",
+								"60e045bafd56333ec4ade62d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category/item/60e04f0f7cda2026989ccf8c",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMTI3ODgsImV4cCI6MTYyNTMxNDU4OH0.4f3XKcNK6-Uz9tGX-8Uz0Vy-lvSi8p7iWGR2vLVIQW4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/category/item/60e051c041f12610c8241894",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"item",
+								"60e051c041f12610c8241894"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/category/60e049e0d17995448cb07ae6",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRmZmIyNzUxNjlmYzMwZmM0NTgxZTAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjUzMjE4MzYsImV4cCI6MTYyNTMyMzYzNn0.oCMY8AvI6Em19OaO0AT7QOK85D6Xnr9vBfAyuvwY5f4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/category/60e049e0d17995448cb07ae6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"60e049e0d17995448cb07ae6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "http://localhost:3000/order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODgyYWMyYzIxNjA4ZjQzYTRiZWIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjI1MzI5NDEwLCJleHAiOjE2MjUzMzEyMTB9.KyPTllJF9fDSayL25YT3yRXasCLJgtfXNm2UA0tNTGc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/order/60e04a20d17995448cb07aee",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODg0M2MyYzIxNjA4ZjQzYTRiZjEiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjI1MzI5Mjc5LCJleHAiOjE2MjUzMzEwNzl9.i4CuOe3c8MTIrYGXGIPdqwMUIiE3mUP5B-RZM7VjXkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/order/60e04a20d17995448cb07aee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"60e04a20d17995448cb07aee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/order/60e08f0f47be8b3a207b8a62",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUwODgyYWMyYzIxNjA4ZjQzYTRiZWIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjI1MzI5NDEwLCJleHAiOjE2MjUzMzEyMTB9.KyPTllJF9fDSayL25YT3yRXasCLJgtfXNm2UA0tNTGc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/order/60e08f0f47be8b3a207b8a62",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"60e08f0f47be8b3a207b8a62"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "60e04a12d17995448cb07aeb"
+  },
+  "name": "vegan",
+  "price": 10,
+  "category": "pizza",
+  "image": "uploads\\veganpizza.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e04a20d17995448cb07aee"
+  },
+  "name": "pepperoni",
+  "price": 12,
+  "category": "pizza",
+  "image": "uploads\\pepperoni.jpg",
+  "__v": 0
+}]

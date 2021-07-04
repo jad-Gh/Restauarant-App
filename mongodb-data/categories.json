@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "60e049e0d17995448cb07ae6"
+  },
+  "items": [
+    {
+      "$oid": "60e04a12d17995448cb07aeb"
+    },
+    {
+      "$oid": "60e04a20d17995448cb07aee"
+    }
+  ],
+  "name": "pizza",
+  "image": "uploads\\pizza.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e0719bb9c9ae17e4cb7e21"
+  },
+  "items": [],
+  "name": "drinks",
+  "image": "uploads\\drinks.jpg",
+  "__v": 0
+}]

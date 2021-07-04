@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "60e0148abd177332c4b74695"
+  },
+  "name": "Hamra branch 1",
+  "longitude": 35,
+  "latitude": 33,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e014d0bd177332c4b74698"
+  },
+  "name": "TJ Branch",
+  "longitude": 33,
+  "latitude": 35,
+  "__v": 0
+}]
