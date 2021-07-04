@@ -1,0 +1,5 @@
+the app runs on localhost 3000
+databse runs on localhost 27017
+
+For references on how the APIs work, please go through API documentation.
+Make sure to adjust the access tokens as you are sending requests through postman
